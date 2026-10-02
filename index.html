@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelebVibe - Manish Ahirana (Manish Raj)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="bg-gradient-to-r from-amber-500 to-red-500 text-white font-bold px-3 py-1.5 rounded-xl text-lg">CV</div>
+            <span class="font-bold text-xl tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">CelebVibe</span>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="flex items-center space-x-3">
+            <button onclick="switchTab('celebs')" id="celebsTabBtn" class="text-white font-medium text-sm bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 transition">जीवनी (Biographies)</button>
+            <button onclick="switchTab('articles')" id="articlesTabBtn" class="text-slate-400 font-medium text-sm px-3 py-1.5 rounded-lg hover:text-white transition">विशेष लेख (Articles)</button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        <!-- Biographies Section -->
+        <div id="celebsSection">
+            <section class="px-4 py-8 text-center max-w-2xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">भोजपुरी सिनेमा के बेताज बादशाह</h1>
+                <p class="text-slate-400 text-sm sm:text-base mb-6">रंगदारी गीतों के बेताज बादशाह, विवादों के राजा और कम उम्र में इतिहास रचने वाले मनीष अहीराना (मनीष राज) की अनकही दास्तान।</p>
+                
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="searchInput" placeholder="नाम या पेशा खोजें..." 
+                        class="w-full pl-11 pr-4 py-3.5 bg-slate-800/80 border border-slate-700 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm shadow-inner">
+                </div>
+            </section>
+
+            <section class="px-4 pb-12 max-w-6xl mx-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-white">ट्रेंडिंग हस्तियां</h2>
+                    <span id="resultCount" class="text-xs text-slate-400">लोड हो रहा है...</span>
+                </div>
+                <div id="celebGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cards will load here dynamically -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Articles Section -->
+        <div id="articlesSection" class="hidden px-4 py-8 max-w-4xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-white mb-2">मनीष अहीराना (मनीष राज) - तहलके और सुर्खियों की असली दास्तान</h2>
+            <p class="text-slate-400 text-sm mb-8">जहाँ स्टारडम, विवाद, स्क्रीनप्ले और बेमिसाल रुतबा एक साथ चलते हैं — पढ़िए अंदर की खबर।</p>
+            
+            <div class="space-y-8">
+                <!-- Article 1: Stardom & Screenplay Credits -->
+                <article class="bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-700 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-rose-500 to-amber-500 text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider">Trending Masala</div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-amber-400 mb-3">महज 20 साल की उम्र में बेतहाशा स्टारडम और 'Manish Ahirana' नाम का जलवा: रंगदारी गानों का बेताज बादशाह!</h3>
+                    <p class="text-slate-400 text-xs mb-4">प्रकाशन वर्ष: 2026 | विशेष रिपोर्ट: CelebVibe Desk</p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        जब सामान्य उम्र के युवा अपने करियर की शुरुआत तलाश रहे होते हैं, तब पीरो, भोजपुर (बिहार) के माटी के लाल <b>मनीष अहीराना</b>, जिन्हें हम <b>मनीष राज</b> के नाम से भी जानते है, ने मात्र 20 साल की छोटी सी उम्र में भोजपुरी संगीत जगत की सल्तनत पर अपना सिक्का जमा लिया है। आज जितने भी बड़े कलाकारों के हिट गाने रिलीज़ होते हैं, उनके ऑफिशियल स्क्रीनप्ले और यूट्यूब डिस्क्रिप्शन क्रेडिट्स में गर्व के साथ **'मनीष अहिराना (मनीष राज)'** का नाम अंकित होता है। रंगदारी, स्वैग और हाई-एनर्जी गानों के लेखन में इनका मुकाबला करने वाला आज दूर-दूर तक कोई दूसरा लेखक नहीं है, जिसके चलते इन्हें आधिकारिक तौर पर **"भोजपुरी का दबंग राईटर"** कहा जाता है।
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        जहाँ शोहरत कदम चूमती है, वहाँ विवाद (Controversies) साये की तरह साथ चलते हैं। आए दिन मीडिया के गलियारों और सोशल मीडिया पर इनकी सुर्खियों की आंधी चलती रहती है—कभी इनके बेबाक तेवर पर बहस होती है तो कभी इनके नए प्रोजेक्ट्स पर घमासान मचता है। इनके जन्मदिन पर सोशल मीडिया की फीड इसकदर जाम हो जाती है कि सर्वर तक हिल जाते हैं, और लाखों फैंस का सैलाब इन्हें सर आंखों पर बिठा लेता है। इस कम उम्र में इतने विराट स्टारडम को संभालना हर किसी के वश की बात नहीं, लेकिन मनीष अहीराना (मनीष राज) ने साबित कर दिया है कि जिगर और हुनर हो तो बादशाहत ऐसे ही हासिल की जाती है।
+                    </p>
+                </article>
+
+                <!-- Article 2: Affairs Rumors & Khesari Bond -->
+                <article class="bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-700 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-red-500 text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider">Exclusive Truth</div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-amber-400 mb-3">अफेयर्स की अफवाहों की सच्चाई और Khesari Lal Yadav के साथ अटूट भाईचारा</h3>
+                    <p class="text-slate-400 text-xs mb-4">प्रकाशन वर्ष: 2026 | विशेष रिपोर्ट: CelebVibe Desk</p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        जब कोई युवा सितारा आसमान की बुलंदियों को छूता है, तो गॉसिप्स का बाजार गर्म होना स्वाभाविक है। आए दिन इंडस्ट्री की तमाम खूबसूरत अभिनेत्रियों और फीमेल सिंगर्स के साथ मनीष अहीराना के जुड़ने की मनगढ़ंत अफवाहें उड़ती रहती हैं। लेकिन मनीष ने हमेशा इन तमाम बेसिर-पैर की खबरों को पूरी दृढ़ता के साथ सिरे से खारिज किया है। उनका साफ और स्पष्ट शब्दों में कहना है कि वे इंडस्ट्री की हर महिला कलाकार का बेहद सम्मान करते हैं और सभी उनकी शानदार तथा पेशेवर मित्र हैं, इसके अलावा कुछ नहीं। उनका पूरा ध्यान केवल अपने रिकॉर्ड-तोड़ गानों और काम पर है।
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        दूसरी ओर, सबसे खास और चर्चित पहलू यह है कि मनीष अहिराना (मनीष राज) को हमेशा भोजपुरी के मेगा-ट्रेडिंग स्टार **खेसारी लाल यादव** के सबसे करीबी खेमे और टीम का हिस्सा माना जाता है। हालांकि वे खून के रिश्ते से सगे नहीं हैं, लेकिन उनका आपसी प्रेम और बॉन्डिंग सगे भाइयों से बढ़कर है। खेसारी भईया का अटूट आशीर्वाद और मनीष की कलम का जादू जब मंच और गानों के माध्यम से बाहर आता है, तो बॉक्स ऑफिस और यूट्यूब पर तहलका मच जाता है। यह छोटा और बड़ा भाई का पवित्र रिश्ता आज पूरी इंडस्ट्री के लिए एक मिसाल बन चुका है।
+                    </p>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Popup for Biography details -->
+    <div id="bioModal" class="fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-800 w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-700 overflow-hidden relative max-h-[90vh] flex flex-col">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-700 hover:bg-rose-500 text-slate-300 hover:text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modalContent" class="overflow-y-auto p-6 sm:p-8">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 CelebVibe. मनीष अहीराना (मनीष राज) के लिए समर्पित।</p>
+    </footer>
+
+    <!-- JavaScript Data and Logic -->
+    <script>
+        const celebrities = [
+            {
+                id: "manish-ahirana",
+                name: "मनीष अहीराना (मनीष राज)",
+                profession: "भोजपुरी के दबंग राईटर, अभिनेता एवं कंट्रोवर्सी किंग",
+                category: "artist",
+                image: "https://www.instagram.com/p/DddNQ8tzl8I/?stkn=emVlN29icHc4YjI=",
+                snippet: "महज 20 साल की उम्र में 'Manish Raj' नाम से इंडस्ट्री पर राज करने वाले, रंगदारी गानों के बेताज बादशाह—मनीष अहीराना।",
+                birthdate: "2006 (उम्र 20 वर्ष)",
+                birthplace: "पीरो, भोजपुर, बिहार, भारत",
+                netWorth: "50 से 60 लाख रुपये +",
+                earlyLife: "बिहार के ऐतिहासिक जिले भोजपुर के पीरो से ताल्लुक रखने वाले मनीष अहीराना को दुनिया **'मनीष राज'** के नाम से भी जानती है। अपनी असाधारण लेखन प्रतिभा के दम पर उन्होंने बहुत कम उम्र में ही पूरे देश में तहलका मचा दिया। लगभग हर बड़े कलाकारों के गानों के स्क्रीनप्ले और डिस्क्रिप्शन क्रेडिट्स में 'Manish Raj' का नाम प्रमुखता से शामिल रहता है। मात्र 20 साल की उम्र में ऐसा प्रचंड स्टारडम हासिल करना हर किसी के वश की बात नहीं होती। वे अपनी व्यक्तिगत जिंदगी को लेकर अक्सर सुर्खियों का केंद्र रहते हैं, जहाँतमाम अभिनेत्रियों के साथ उनके नाम जोड़े जाते हैं, परंतु उन्होंने हमेशा इन सभी अफवाहों का खंडन किया है।",
+                career: "भोजपुरी इंडस्ट्री में 26 नवंबर 2018 को कदम रखने वाले मनीष अहीराना (मनीष राज) आज किसी परिचय के मोहताज नहीं हैं। रंगदारी, स्वैग और हाई-एनर्जी गानों के वे निर्विवाद रूप से नंबर-वन राइटर हैं, जिन्हें आदर के साथ **'भोजपुरी का दबंग राईटर'** और **'Controversy King'** पुकारा जाता है। उनके जन्मदिन के खास मौके पर सोशल मीडिया की पूरी फीड जाम हो जाती है और लाखों फैंस की विशाल फौज उनका समर्थन करती है।\n\nउन्हें ट्रेंडिंग स्टार **खेसारी लाल यादव** के सबसे करीबी खेमे और टीम का हिस्सा माना जाता है—वे सगे नहीं हैं पर सगे भाइयों से बढ़कर हैं, जहाँ दोनों के बीच छोटे और बड़े भाई का अटूट स्नेह जगजाहिर है। पवन सिंह, खेसारी लाल यादव और निरहुआ जैसे दिग्गजों के साथ उनके गानों में 'Manish Raj' का क्रेडिट उनकी सफलता की गवाही देता है।",
+                awards: [
+                    "आयु: मात्र 20 वर्ष और अद्वितीय स्टारडम",
+                    "विशेष पहचान: 'Manish Raj' नाम से स्क्रीनप्ले और डिस्क्रिप्शन क्रेडिट्स",
+                    "विशेष उपाधि: Bhojpuri Ka Dabbang Writer & Controversy King",
+                    "खेसारी लाल यादव के साथ अटूट भाईचारे का अनूठा रिश्ता",
+                    "450+ गीत, 50 ब्लॉकबस्टर और 50 लाख+ नेटवर्थ"
+                ],
+                trending: true
+            },
+            {
+                id: 1,
+                name: "Arijit Singh",
+                profession: "Playback Singer & Musician",
+                category: "artist",
+                image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
+                snippet: "Renowned Indian playback singer known for his soulful voice.",
+                birthdate: "April 25, 1987",
+                birthplace: "Jiaganj, Murshidabad, West Bengal",
+                netWorth: "$8 Million",
+                earlyLife: "Born in Jiaganj to a Punjabi father and a Bengali mother.",
+                career: "Rose to mainstream prominence with 'Tum Hi Ho' in 2013.",
+                awards: ["National Film Award", "Filmfare Awards"],
+                trending: true
+            }
+        ];
+
+        function renderCelebrities(list) {
+            const grid = document.getElementById('celebGrid');
+            document.getElementById('resultCount').innerText = `कुल ${list.length} हस्तियां दिखाई जा रही हैं`;
+            
+            if(list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400">कोई हस्ती नहीं मिली</div>`;
+                return;
+            }
+
+            grid.innerHTML = list.map(c => `
+                <div onclick="openModal('${c.id}')" class="bg-slate-800/80 border border-slate-700/80 rounded-3xl overflow-hidden shadow-lg hover:border-amber-500/50 transition cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="${c.image}" alt="${c.name}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 bg-rose-500/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">${c.profession}</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-2">${c.name}</h3>
+                        <p class="text-slate-400 text-xs line-clamp-2 mb-4 flex-grow">${c.snippet}</p>
+                        <div class="flex justify-between items-center pt-3 border-t border-slate-700/50 text-xs text-slate-400">
+                            <span><i class="fa-solid fa-cake-candles mr-1.5 text-amber-500"></i>${c.birthdate}</span>
+                            <span class="text-amber-400 font-semibold flex items-center">पूरी दास्तान पढ़ें <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function switchTab(tab) {
+            const celebsSec = document.getElementById('celebsSection');
+            const articlesSec = document.getElementById('articlesSection');
+            const celebsBtn = document.getElementById('celebsTabBtn');
+            const articlesBtn = document.getElementById('articlesTabBtn');
+
+            if(tab === 'articles') {
+                celebsSec.classList.add('hidden');
+                articlesSec.classList.remove('hidden');
+                articlesBtn.className = "text-white font-medium text-sm bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 transition";
+                celebsBtn.className = "text-slate-400 font-medium text-sm px-3 py-1.5 rounded-lg hover:text-white transition";
+            } else {
+                articlesSec.classList.add('hidden');
+                celebsSec.classList.remove('hidden');
+                celebsBtn.className = "text-white font-medium text-sm bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 transition";
+                articlesBtn.className = "text-slate-400 font-medium text-sm px-3 py-1.5 rounded-lg hover:text-white transition";
+            }
+        }
+
+        function openModal(id) {
+            const c = celebrities.find(item => item.id == id || item.id === id);
+            if(!c) return;
+
+            document.getElementById('modalContent').innerHTML = `
+                <div class="flex items-center space-x-4 mb-6">
+                    <img src="${c.image}" alt="${c.name}" class="w-20 h-20 rounded-2xl object-cover border-2 border-amber-500">
+                    <div>
+                        <span class="bg-rose-500/20 text-rose-400 text-xs font-semibold px-2.5 py-1 rounded-md">${c.profession}</span>
+                        <h2 class="text-2xl font-bold text-white mt-1">${c.name}</h2>
+                    </div>
+                </div>
+                <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                    <div><h4 class="font-bold text-amber-400 mb-1">प्रारंभिक जीवन एवं 'Manish Raj' पहचान</h4><p>${c.earlyLife}</p></div>
+                    <div><h4 class="font-bold text-amber-400 mb-1">करियर, कंट्रोवर्सी और भाईचारा</h4><p style="white-space: pre-line;">${c.career}</p></div>
+                    <div class="grid grid-cols-2 gap-4 bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
+                        <div><span class="text-slate-400 block text-xs">जन्म स्थान</span><strong class="text-white">${c.birthplace}</strong></div>
+                        <div><span class="text-slate-400 block text-xs">कुल संपत्ति (Net Worth)</span><strong class="text-white">${c.netWorth}</strong></div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-amber-400 mb-2">प्रमुख विशेषताएँ</h4>
+                        <ul class="list-disc list-inside space-y-1 text-slate-300">
+                            ${c.awards.map(a => `<li>${a}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            document.getElementById('bioModal').classList.remove('hidden');
+            document.getElementById('bioModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('bioModal').classList.add('hidden');
+            document.getElementById('bioModal').classList.remove('flex');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = celebrities.filter(c => c.name.toLowerCase().includes(term) || c.profession.toLowerCase().includes(term));
+            renderCelebrities(filtered);
+        });
+
+        // Initial Load
+        renderCelebrities(celebrities);
+    </script>
+</body>
+</html>
